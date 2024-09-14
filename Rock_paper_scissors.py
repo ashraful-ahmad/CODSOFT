@@ -7,6 +7,8 @@ def rock():
     print (x)
     if x == "Scissors" :
         print ("Hurrah! You Win")
+    elif x=="Rock":
+        print("Its a Draw")    
     else :
         print("Oops! you Loosse")    
 
@@ -17,6 +19,8 @@ def paper():
     print (y)
     if y == "Rock" :
         print ("Hurrah! You Win")
+    elif y=="Paper":
+        print("Its a Draw")     
     else :
         print ("Oops! you Loosse")
 
@@ -26,6 +30,8 @@ def scissors():
     print (z)
     if z == "Paper" :
         print ("Hurrah! You Win")
+    elif z=="Scissors":
+        print("Its a Draw") 
     else :
         print ("Oops! you Loosse")    
 
@@ -42,10 +48,34 @@ def main():
 
         if user_choice == '1':
             rock()
+            choice_2 = input("Want to Play Again (yes/no): ")
+            if choice_2 == "yes":
+                continue 
+            elif choice_2=="no":
+                break
+            else :
+                print ("Invalid Option Play Again!") 
+
         elif user_choice == '2':
-            paper()   
+            paper() 
+            choice_2 = input("Want to Play Again (yes/no): ")
+            if choice_2 == "yes":
+                continue 
+            elif choice_2=="no":
+                break
+            else :
+                print ("Invalid Option Play Again!") 
+
         elif user_choice == '3':
             scissors()
+            choice_2 = input("Want to Play Again (yes/no): ")
+            if choice_2 == "yes":
+                continue 
+            elif choice_2=="no":
+                break
+            else :
+                print ("Invalid Option. Play Again!") 
+
         elif user_choice == '4':
             print("Thank you For Playing.")
             break
